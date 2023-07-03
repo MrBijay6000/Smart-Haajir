@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:smarthaajir/screens/home.dart';
+
 import 'package:smarthaajir/screens/home1.dart';
 import 'package:smarthaajir/screens/home2.dart';
 import 'package:smarthaajir/screens/image.dart';
 import 'package:smarthaajir/screens/login.dart';
-import 'package:smarthaajir/screens/login1.dart';
-import 'package:smarthaajir/screens/login2.dart';
+
 import 'package:smarthaajir/screens/login3.dart';
 
 void main() {
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage2(),
+      home: LoginPage22(),
     );
   }
 }

@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff3f6ff),
+      backgroundColor: const Color(0xfff3f6ff),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -52,12 +52,13 @@ class _HomeScreenState extends State<HomeScreen2> {
                         child: Container(
                           width: 50,
                           height: 50,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://rukminim2.flixcart.com/image/850/1000/kyvvtzk0/poster/j/i/f/medium-naruto-shippuden-sharingan-mangekyou-sharingan-anime-original-imagbygkqdmbwgvj.jpeg?q=90'),
-                                fit: BoxFit.cover),
+                              image: NetworkImage(
+                                  'https://rukminim2.flixcart.com/image/850/1000/kyvvtzk0/poster/j/i/f/medium-naruto-shippuden-sharingan-mangekyou-sharingan-anime-original-imagbygkqdmbwgvj.jpeg?q=90'),
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
@@ -69,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'Welcome',
                               style: TextStyle(
                                 color: Colors.white,
@@ -79,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                             ),
                             Container(
                               width: MediaQuery.of(context).size.width - 160,
-                              child: Text(
+                              child: const Text(
                                 'Prasanna Dharel',
                                 style: TextStyle(
                                   fontSize: 20,
@@ -93,18 +94,16 @@ class _HomeScreenState extends State<HomeScreen2> {
                         ),
                       ),
                       const Spacer(),
-                      Padding(
-                        padding: const EdgeInsets.only(
+                      const Padding(
+                        padding: EdgeInsets.only(
                             left: 20.0, bottom: 20.0, top: 60.0),
-                        child: const Icon(
+                        child: Icon(
                           Icons.notifications_outlined,
                           size: 30,
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(
-                        width: 20,
-                      )
+                      const SizedBox(width: 20)
                     ],
                   ),
                 ),
@@ -146,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen2> {
               child: Column(
                 children: [
                   SizedBox(
-                    width: 350,
+                    width: MediaQuery.of(context).size.width / 1.1,
                     height: 120,
                     child: ImageSlideshow(
                       indicatorColor: Colors.blue,
@@ -201,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16.0),
@@ -230,11 +229,9 @@ class _HomeScreenState extends State<HomeScreen2> {
                           ],
                         ),
                       ),
-                      SizedBox(
-                        width: 10,
-                      ),
+                      const SizedBox(width: 10),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16.0),
@@ -269,12 +266,13 @@ class _HomeScreenState extends State<HomeScreen2> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        width: 160,
-                        height: 100,
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        //height: 100,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -282,8 +280,10 @@ class _HomeScreenState extends State<HomeScreen2> {
                             Image.asset(
                               'assets/tracking.png',
                               width: 60,
+                              alignment: Alignment.bottomCenter,
                               height: 60,
                             ),
+                            const SizedBox(height: 10),
                             const Text(
                               'Tracking',
                               style: TextStyle(
@@ -295,13 +295,15 @@ class _HomeScreenState extends State<HomeScreen2> {
                           ],
                         ),
                       ),
+                      const SizedBox(width: 10),
                       Container(
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        width: 160,
-                        height: 100,
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        //height: 100,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -311,10 +313,11 @@ class _HomeScreenState extends State<HomeScreen2> {
                               width: 60,
                               height: 60,
                             ),
+                            const SizedBox(height: 10),
                             const Text(
                               'Events',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 16,
                                 fontWeight: FontWeight.w500,
                               ),
                               textAlign: TextAlign.center,
@@ -329,12 +332,13 @@ class _HomeScreenState extends State<HomeScreen2> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        width: 160,
-                        height: 100,
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        //height: 100,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -342,8 +346,10 @@ class _HomeScreenState extends State<HomeScreen2> {
                             Image.asset(
                               'assets/payslip.png',
                               width: 60,
+                              alignment: Alignment.bottomCenter,
                               height: 60,
                             ),
+                            const SizedBox(height: 10),
                             const Text(
                               'Pay Slip',
                               style: TextStyle(
@@ -355,13 +361,15 @@ class _HomeScreenState extends State<HomeScreen2> {
                           ],
                         ),
                       ),
+                      const SizedBox(width: 10),
                       Container(
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(16.0),
                         ),
-                        width: 160,
-                        height: 100,
+                        width: MediaQuery.of(context).size.width / 2.5,
+                        //height: 100,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -371,6 +379,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                               width: 60,
                               height: 60,
                             ),
+                            const SizedBox(height: 10),
                             const Text(
                               'QR',
                               style: TextStyle(
@@ -384,10 +393,10 @@ class _HomeScreenState extends State<HomeScreen2> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 0),
                   // Padding(padding: EdgeInsets.only(left: 1200)),
                   Padding(
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     child: Container(
                       //padding: EdgeInsets.all(10),
                       alignment: Alignment.centerLeft,
@@ -400,10 +409,10 @@ class _HomeScreenState extends State<HomeScreen2> {
                       ),
                     ),
                   ),
-
-                  //const SizedBox(height: 20),
+                  const SizedBox(height: 0),
                   Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding:
+                        const EdgeInsets.only(left: 20.0, right: 20.0, top: 0),
                     child: Container(
                       decoration: const BoxDecoration(
                         color: Colors.white,
@@ -421,13 +430,20 @@ class _HomeScreenState extends State<HomeScreen2> {
                             width: 100,
                           ),
 
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: const [
-                              Text('Anil Karki'),
-                              Text('Employee of the month'),
-                            ],
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'Anil Karki',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                                Text('Employee of the month'),
+                              ],
+                            ),
                           ),
+
                           // Column(
                           //   children: [
                           //     Text('Anil Karkiii'),
@@ -446,7 +462,8 @@ class _HomeScreenState extends State<HomeScreen2> {
                           color: Color(0xff31b377),
                         ),
                         height: 50,
-                        width: 180,
+                        // width: 180,
+                        width: MediaQuery.of(context).size.width / 2.8,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -468,7 +485,9 @@ class _HomeScreenState extends State<HomeScreen2> {
                           color: Color(0xFFff3f3c),
                         ),
                         height: 50,
-                        width: 180,
+                        // width: 180,
+                        width: MediaQuery.of(context).size.width / 2.8,
+
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -490,7 +509,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                 ],
               ),
             ),
-            const SizedBox(height: 80),
+            const SizedBox(height: 30),
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             //   children: <Widget>[
