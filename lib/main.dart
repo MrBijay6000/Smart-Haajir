@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-
-import 'package:smarthaajir/screens/home1.dart';
-import 'package:smarthaajir/screens/home2.dart';
+import 'package:smarthaajir/screens/animate.dart';
+import 'package:smarthaajir/screens/animate1.dart';
 import 'package:smarthaajir/screens/image.dart';
 import 'package:smarthaajir/screens/login.dart';
 
 import 'package:smarthaajir/screens/login3.dart';
+import 'package:smarthaajir/screens/wallet.dart';
+import 'package:smarthaajir/screens/wallet1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginPage22(),
+      home: BankingWalletHome(),
     );
   }
 }

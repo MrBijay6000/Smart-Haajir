@@ -78,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                                 fontSize: 22,
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width - 160,
                               child: const Text(
                                 'Prasanna Dharel',
@@ -103,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(width: 20)
+                      const SizedBox(width: 20),
                     ],
                   ),
                 ),

@@ -6,6 +6,50 @@ class LoginPage2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _userNameController = TextEditingController();
+
+    void showConfirmationDialog(BuildContext context) {
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: const Text(
+              'Missing Information',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              ),
+            ),
+            content: const Text(
+              'Please enter your username and password.',
+              style: TextStyle(
+                fontFamily: AutofillHints.birthday,
+                fontSize: 20,
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: const Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+
+    void _saveUser() {
+      final enteredName = _userNameController.text;
+
+      if (enteredName.isEmpty) {
+        showConfirmationDialog(context);
+        return;
+      }
+      // Continue with your logic here
+    }
+
     return Scaffold(
       body: Container(
         color: const Color(0xFF0c76ae),
@@ -80,11 +124,12 @@ class LoginPage2 extends StatelessWidget {
                         height: 50,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (ctx) => const HomeScreen2(),
-                              ),
-                            );
+                            _saveUser();
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(
+                            //     builder: (ctx) => const HomeScreen2(),
+                            //   ),
+                            // );
                           },
                           child: const Text(
                             'LOGIN',
